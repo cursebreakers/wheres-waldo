@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div#gameBoard.gameBoard
+    h1= title
+    p#timer.timer
+    p#total.total
+    div.gameFrame(style="position: relative;" id="gameFrame")
+      img.gameImg(src='/images/pokemon_maikomimi.jpg', alt='Game Image')
+      a.hitbox.water(data-type="water", id="water-hitbox")
+      a.hitbox.electric(data-type="electric", id="electric-hitbox")
+      a.hitbox.normal(data-type="normal", id="normal-hitbox") 
+      a.hitbox.fire(data-type="fire", id="fire-hitbox") 
+    div.tips 
+      p (Double click to reset red boxes) 
+  div.bottom
+    div#roster
